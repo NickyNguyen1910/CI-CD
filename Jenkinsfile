@@ -6,7 +6,7 @@ pipeline {
             steps {
               script {
            // The below will clone your repo and will be checked out to master branch by default.
-                 git credentialsId: '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', url: 'https://github.com/NickyNguyen1910/CI-CD'
+                 git credentialsId: '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', url: 'https://github.com/NickyNguyen1910/CI-CD'
            // Do a ls -lart to view all the files are cloned. It will be clonned. This is just for you to be sure about it.
                  sh "ls -lart ./*" 
            // List all branches in your repo. 
