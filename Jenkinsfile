@@ -15,7 +15,7 @@ pipeline {
                  echo 'Cloning files from (branch: "' + branchName + '" )'
            
                  dir('build') {
-                    git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl
+                    git branch: branchName, url: repoUrl
                  } 
                }
              }
