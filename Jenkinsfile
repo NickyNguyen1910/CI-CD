@@ -1,4 +1,4 @@
-String branchName = env.main
+String branchName = "main"
 String repoUrl = "https://github.com/NickyNguyen1910/CI-CD.git"
 
 pipeline {
