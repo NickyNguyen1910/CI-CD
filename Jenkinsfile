@@ -1,28 +1,24 @@
+String branchName = env.main
+String repoUrl = "https://github.com/NickyNguyen1910/CI-CD.git"
+
 pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Clone') {
             steps {
               script {
-           // The below will clone your repo and will be checked out to master branch by default.
-                 git clone 'https://github.com/NickyNguyen1910/CI-CD'
+                 echo 'Make the output directory'
            
-                 sh "cd CI-CD"
+                 sh 'mkdir -p build'
             
-                 sh "git branch -a"
+                 echo 'Cloning files from (branch: "' + branchName + '" )'
            
-                 sh "git checkout main"
+                 dir('build') {
+                    git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl
+                 } 
                }
              }
           } 
-        stage('Zip') {
-            steps {
-                sh "tar -cvf app.tar ."
-                sh "ls -l"             
-            }
-        }
-
-        
     }
 }
