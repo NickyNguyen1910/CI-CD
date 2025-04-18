@@ -9,6 +9,7 @@ pipeline {
             steps {
               script {
                  echo 'Make the output directory'
+                 sh 'pwd'
            
                  sh 'mkdir -p CICD'
             
@@ -16,7 +17,7 @@ pipeline {
            
                  dir('CICD') {
                     git branch: branchName, url: repoUrl
-                 sh 'tar -cvf CICD.tar /CICD'
+                 
                  } 
                }
              }
