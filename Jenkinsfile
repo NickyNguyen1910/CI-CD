@@ -14,7 +14,7 @@ pipeline {
             
                  echo 'Cloning files from (branch: "' + branchName + '" )'
            
-                 dir('CI/CD') {
+                 dir('CICD') {
                     git branch: branchName, url: repoUrl
                  sh 'tar -cvf CICD.tar /CICD'
                  } 
