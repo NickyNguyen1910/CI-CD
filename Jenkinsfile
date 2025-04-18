@@ -19,7 +19,8 @@ pipeline {
            
                  dir('CICD') {
                     git branch: branchName, url: repoUrl
-                 
+
+                 sh 'tar -cvf CICD.tar /var/jenkins_home/workspace/github-demo/CICD'
                  } 
                }
              }
