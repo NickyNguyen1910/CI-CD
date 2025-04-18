@@ -10,12 +10,13 @@ pipeline {
               script {
                  echo 'Make the output directory'
            
-                 sh 'mkdir -p CI/CD'
+                 sh 'mkdir -p CICD'
             
                  echo 'Cloning files from (branch: "' + branchName + '" )'
            
                  dir('CI/CD') {
                     git branch: branchName, url: repoUrl
+                 sh 'tar -cvf CICD.tar /home/CICD'
                  } 
                }
              }
