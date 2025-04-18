@@ -10,11 +10,11 @@ pipeline {
               script {
                  echo 'Make the output directory'
            
-                 sh 'mkdir -p build'
+                 sh 'mkdir -p CI/CD'
             
                  echo 'Cloning files from (branch: "' + branchName + '" )'
            
-                 dir('build') {
+                 dir('CI/CD') {
                     git branch: branchName, url: repoUrl
                  } 
                }
