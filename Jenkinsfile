@@ -34,7 +34,7 @@ pipeline {
        }
         stage('MoveToS3') {
             steps {
-                scripts {
+                script {
                     echo 'hehe'
                 }
             }
