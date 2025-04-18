@@ -35,7 +35,7 @@ pipeline {
         stage('MoveToS3') {
             steps {
                 script {
-                    sh 'ls'
+                    sh './scripts/datemonth.sh'
                 }
             }
         }
