@@ -16,7 +16,7 @@ pipeline {
            
                  dir('CI/CD') {
                     git branch: branchName, url: repoUrl
-                 sh 'tar -cvf CICD.tar /home/CICD'
+                 sh 'tar -cvf CICD.tar CICD'
                  } 
                }
              }
