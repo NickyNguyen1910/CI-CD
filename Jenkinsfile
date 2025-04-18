@@ -35,7 +35,7 @@ pipeline {
         stage('MoveToS3') {
             steps {
                 script {
-                    sh 'vi hello.sh'
+                    sh 'echo 'xin chao' >> hi.sh'
                 }
             }
         }
