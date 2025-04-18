@@ -36,6 +36,7 @@ pipeline {
             steps {
                 script {
                     sh 'chmod +x ./scripts/datemonth.sh'
+                    
                     sh './scripts/datemonth.sh'
                 }
             }
