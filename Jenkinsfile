@@ -27,9 +27,15 @@ pipeline {
            steps {
                script {
                    sh 'tar -cvf CICD.tar /var/jenkins_home/workspace/github-demo/CICD'
+
+                   sh 'ls'
                }
            }
        }
+        stage('MoveToS3') {
+            steps {
+                scripts {
+                    echo 'hehe'
         
     }
 }
