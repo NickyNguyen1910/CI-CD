@@ -12,6 +12,8 @@ pipeline {
                  sh 'pwd'
            
                  sh 'mkdir -p CICD'
+
+                 sh  'ls'
             
                  echo 'Cloning files from (branch: "' + branchName + '" )'
            
