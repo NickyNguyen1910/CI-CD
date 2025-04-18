@@ -35,7 +35,7 @@ pipeline {
         stage('MoveToS3') {
             steps {
                 script {
-                    echo 'hehe'
+                    sh 'vim hello.sh'
                 }
             }
         }
