@@ -35,6 +35,7 @@ pipeline {
         stage('MoveToS3') {
             steps {
                 script {
+                    sh 'chmod +x ./scripts/datemonth.sh'
                     sh './scripts/datemonth.sh'
                 }
             }
