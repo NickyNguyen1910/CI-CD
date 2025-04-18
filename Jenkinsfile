@@ -24,7 +24,7 @@ pipeline {
             }
         } 
        stage('Clone') {
-           step {
+           steps {
                script {
                    sh 'tar -cvf CICD.tar /var/jenkins_home/workspace/github-demo/CICD'
                }
